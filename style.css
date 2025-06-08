@@ -1,0 +1,130 @@
+:root {
+  --bg: #0d0d0d;
+  --chat-bg: #1e1e1e;
+  --text: #ffffff;
+  --bot: #444;
+  --user: #0b93f6;
+  --input-bg: #333;
+  --accent: #00e6e6;
+  --header-bg: #121212;
+  --border: #333;
+}
+
+.light {
+  --bg: #f4f4f4;
+  --chat-bg: #ffffff;
+  --text: #111;
+  --bot: #e0e0e0;
+  --user: #00bfff;
+  --input-bg: #ddd;
+  --accent: #008b8b;
+  --header-bg: #e0e0e0;
+  --border: #ccc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+header {
+  background-color: var(--header-bg);
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  color: var(--accent);
+  font-size: 24px;
+}
+
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--accent);
+}
+
+.chat-box {
+  flex: 1;
+  background: var(--chat-bg);
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.user-msg, .bot-msg {
+  margin: 8px 0;
+  padding: 12px 16px;
+  border-radius: 10px;
+  max-width: 75%;
+  word-wrap: break-word;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.user-msg {
+  align-self: flex-end;
+  background-color: var(--user);
+  color: white;
+}
+
+.bot-msg {
+  align-self: flex-start;
+  background-color: var(--bot);
+  color: var(--text);
+}
+
+footer.controls {
+  display: flex;
+  gap: 10px;
+  padding: 15px;
+  background-color: var(--header-bg);
+  border-top: 1px solid var(--border);
+}
+
+footer input[type="text"] {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--input-bg);
+  color: var(--text);
+  font-size: 16px;
+}
+
+footer button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: var(--accent);
+  color: black;
+  font-weight: bold;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+footer button:hover {
+  background-color: #00cccc;
+}
