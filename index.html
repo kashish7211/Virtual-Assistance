@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nova - Virtual Assistant</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Nova - Your Virtual Assistant</h1>
+      <button id="theme-toggle" onclick="toggleTheme()">🌙</button>
+    </header>
+
+    <main class="chat-box" id="chat-box">
+      <div class="bot-msg">Hello! I'm Nova. Ask me anything.</div>
+    </main>
+
+    <footer class="controls">
+      <input type="text" id="user-input" placeholder="Ask your question..." />
+      <button onclick="sendMessage()">Send</button>
+      <button onclick="startListening()">Speak</button>
+      <button onclick="clearChat()">Clear</button>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
